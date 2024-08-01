@@ -19,6 +19,10 @@ import androidx.compose.ui.unit.dp
 import com.uvg.lab4.ui.theme.Lab4Theme
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 
 
 @Composable
@@ -37,17 +41,21 @@ fun Columnas(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .height(40.dp)
-                .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.primary),
+                .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
-            Text("Universidad del Valle de Guatemala", color = MaterialTheme.colorScheme.onPrimary)
+            Text(
+                "Universidad del Valle de Guatemala",
+                color = Color.Black,
+                style = TextStyle(
+                    fontWeight = FontWeight.Bold
+                )
+            )
         }
         Box(
             modifier = Modifier
                 .height(40.dp)
-                .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.primary),
+                .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
             Text("Programación de plataformas móviles, Sección 30", color = MaterialTheme.colorScheme.onPrimary)
@@ -56,7 +64,7 @@ fun Columnas(modifier: Modifier = Modifier) {
         Division1(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(40.dp)
+                .height(80.dp)
         )
         Division2(
             modifier = Modifier
@@ -109,7 +117,7 @@ fun Division1(modifier: Modifier = Modifier) {
             Column(
                 modifier = Modifier
                     .padding(4.dp),
-                verticalArrangement = Arrangement.SpaceAround,
+                verticalArrangement = Arrangement.SpaceEvenly,
                 horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("Fernando Rueda", color = MaterialTheme.colorScheme.onPrimary)
                 Text("Juan Martinez", color = MaterialTheme.colorScheme.onPrimary)
