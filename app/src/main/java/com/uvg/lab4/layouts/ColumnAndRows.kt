@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 
 
@@ -29,65 +30,84 @@ import androidx.compose.ui.unit.sp
 fun Lab4(
     modifier: Modifier = Modifier
 ) {
-    Columnas(modifier)
+    Columnas(modifier = Modifier.fillMaxSize())
 }
 
 @Composable
 fun Columnas(modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        modifier = modifier
+            .fillMaxWidth(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Box(
             modifier = Modifier
-                .height(40.dp)
+                .height(100.dp)
                 .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
             Text(
                 "Universidad del Valle de Guatemala",
                 color = Color.Black,
+                textAlign = TextAlign.Center,
                 style = TextStyle(
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 35.sp
                 )
             )
         }
         Box(
             modifier = Modifier
-                .height(40.dp)
+                .height(80.dp)
                 .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
-            Text("Programación de plataformas móviles, Sección 30", color = MaterialTheme.colorScheme.onPrimary)
+            Text(
+                "Programación de plataformas móviles, Sección 30",
+                color = Color.Black,
+                textAlign = TextAlign.Center,
+                style = TextStyle(
+                    fontSize = 25.sp
+                )
+            )
         }
 
         Division1(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(80.dp)
+                .height(90.dp)
         )
         Division2(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(40.dp)
+                .height(80.dp)
         )
         Box(
             modifier = Modifier
-                .height(40.dp)
-                .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.primary),
+                .height(15.dp)
+                .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
-            Text("Fernando Andree Hernández Martínez", color = MaterialTheme.colorScheme.onPrimary)
+            Text("Fernando Andree Hernández Martínez",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 15.sp
+                )
+            )
         }
         Box(
             modifier = Modifier
-                .height(40.dp)
-                .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.primary),
+                .height(15.dp)
+                .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
-            Text("Número de carné: 23645", color = MaterialTheme.colorScheme.onPrimary)
+            Text("Número de carné: 23645",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 15.sp
+                )
+            )
         }
     }
 }
@@ -101,17 +121,21 @@ fun Division1(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
-                .background(MaterialTheme.colorScheme.primary),
+                .weight(1f),
             contentAlignment = Alignment.Center
         ) {
-            Text("Integrantes", color = MaterialTheme.colorScheme.onPrimary)
+            Text("INTEGRANTES",
+                color = Color.Black,
+                style = TextStyle(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 17.sp
+                )
+            )
         }
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
-                .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)),
+                .weight(1f),
             contentAlignment = Alignment.Center
         ) {
             Column(
@@ -119,9 +143,9 @@ fun Division1(modifier: Modifier = Modifier) {
                     .padding(4.dp),
                 verticalArrangement = Arrangement.SpaceEvenly,
                 horizontalAlignment = Alignment.CenterHorizontally) {
-                Text("Fernando Rueda", color = MaterialTheme.colorScheme.onPrimary)
-                Text("Juan Martinez", color = MaterialTheme.colorScheme.onPrimary)
-                Text("Fernando Hernandez", color = MaterialTheme.colorScheme.onPrimary)
+                Text("Fernando Rueda", color = Color.Black)
+                Text("Juan Martinez", color = Color.Black)
+                Text("Fernando Hernandez", color = Color.Black)
             }
         }
     }
@@ -136,20 +160,25 @@ fun Division2(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
-                .background(MaterialTheme.colorScheme.primary),
+                .weight(1f),
             contentAlignment = Alignment.Center
         ) {
-            Text("CATEDRÁTICO", color = MaterialTheme.colorScheme.onPrimary)
+            Text("CATEDRÁTICO",
+                color = Color.Black,
+                style = TextStyle(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 17.sp
+                )
+            )
         }
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
-                .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)),
+                .weight(1f),
             contentAlignment = Alignment.Center
         ) {
-            Text("Juan Carlos Durini", color = MaterialTheme.colorScheme.onPrimary)
+            Text("Juan Carlos Durini",
+                color = Color.Black)
         }
     }
 }
