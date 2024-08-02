@@ -1,6 +1,7 @@
 package com.uvg.lab4.layouts
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,6 +25,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.layout.padding
 
 
 @Composable
@@ -36,10 +38,12 @@ fun Lab4(
 @Composable
 fun Columnas(modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier
-            .fillMaxWidth(),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
+            .fillMaxWidth()
+            .border(15.dp, Color(0xFF126e22))
+            .padding(16.dp)
     ) {
         Box(
             modifier = Modifier
