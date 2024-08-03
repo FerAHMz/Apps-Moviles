@@ -48,7 +48,8 @@ fun Columnas(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .height(100.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .padding(6.dp),
             contentAlignment = Alignment.Center
         ) {
             Text(
@@ -64,7 +65,8 @@ fun Columnas(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .height(80.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .padding(6.dp),
             contentAlignment = Alignment.Center
         ) {
             Text(
@@ -81,11 +83,13 @@ fun Columnas(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(90.dp)
+                .padding(6.dp)
         )
         Division2(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(80.dp)
+                .padding(6.dp)
         )
         Box(
             modifier = Modifier
